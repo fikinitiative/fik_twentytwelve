@@ -1,0 +1,11 @@
+ul.product-list > li > div.fik2012-thumb {
+    background: #e6e6e6 url('/wp-content/themes/fik_twentytwelve/img/product36x36px.png') no-repeat center center;
+    border-radius: 3px;
+}
+
+@media print,(-o-min-device-pixel-ratio:5/4),(-webkit-min-device-pixel-ratio:1.25),(min-resolution:120dpi){
+    ul.product-list > li > div.fik2012-thumb {
+        background: #e6e6e6 url('/wp-content/themes/fik_twentytwelve/img/product36x36px@2x.png') no-repeat center center;
+        background-size: 36px 36px;
+    }
+}
