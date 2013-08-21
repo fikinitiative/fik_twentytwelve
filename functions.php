@@ -917,15 +917,3 @@ if (!function_exists('twentytwelve_comment')) :
     }
 
     add_filter('excerpt_more', 'new_excerpt_more');
-
-    /*
-     * Add thickbox support
-     */
-    add_action('init', 'myplugin_thickbox');
-
-    function myplugin_thickbox() {
-        if (!is_admin()) {
-            wp_enqueue_script('thickbox', null, array('jquery'));
-            wp_enqueue_style('thickbox.css', '/' . WPINC . '/js/thickbox/thickbox.css', null, '1.0');
-        }
-    }
