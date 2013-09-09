@@ -813,94 +813,95 @@ if (!function_exists('twentytwelve_comment')) :
     /*
      * Add the selected Title font from Google fonts to the header of the page
      */
-    add_action('wp_head', function() {
-                switch (get_theme_mod('fik_head_font', 'Open Sans')) {
-                    case 'Kotta One':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Ubuntu Mono':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Macondo Swash Caps':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Macondo+Swash+Caps' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'PT Sans':
-                        echo("<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Poiret One':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Caesar Dressing':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Gudea':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Josefin Sans':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Skranji':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Skranji' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Engagement':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Libre Baskerville':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Convergence':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Fontdiner Swanky':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Clicker Script':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Sacramento':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Krona One':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Krona+One' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Audiowide':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Averia Libre':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Averia+Libre' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'McLaren':
-                        echo("<link href='https://fonts.googleapis.com/css?family=McLaren' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Cutive':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Scada':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Play':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Bree Serif':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Press Start 2P':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Sancreek':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Sancreek' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Homemade Apple':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>");
-                        break;
-                    case 'Dr Sugiyama':
-                        echo("<link href='https://fonts.googleapis.com/css?family=Dr+Sugiyama' rel='stylesheet' type='text/css'>");
-                        break;
-                    default:
-                        return;
-                        break;
-                }
-            });
+    add_action('wp_head', 'add_custom_google_web_fonts');
+    function add_custom_google_web_fonts() {
+        switch (get_theme_mod('fik_head_font', 'Open Sans')) {
+            case 'Kotta One':
+                echo("<link href='https://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Ubuntu Mono':
+                echo("<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Macondo Swash Caps':
+                echo("<link href='https://fonts.googleapis.com/css?family=Macondo+Swash+Caps' rel='stylesheet' type='text/css'>");
+                break;
+            case 'PT Sans':
+                echo("<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Poiret One':
+                echo("<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Caesar Dressing':
+                echo("<link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Gudea':
+                echo("<link href='https://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Josefin Sans':
+                echo("<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Skranji':
+                echo("<link href='https://fonts.googleapis.com/css?family=Skranji' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Engagement':
+                echo("<link href='https://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Libre Baskerville':
+                echo("<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Convergence':
+                echo("<link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Fontdiner Swanky':
+                echo("<link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Clicker Script':
+                echo("<link href='https://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Sacramento':
+                echo("<link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Krona One':
+                echo("<link href='https://fonts.googleapis.com/css?family=Krona+One' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Audiowide':
+                echo("<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Averia Libre':
+                echo("<link href='https://fonts.googleapis.com/css?family=Averia+Libre' rel='stylesheet' type='text/css'>");
+                break;
+            case 'McLaren':
+                echo("<link href='https://fonts.googleapis.com/css?family=McLaren' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Cutive':
+                echo("<link href='https://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Scada':
+                echo("<link href='https://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Play':
+                echo("<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Bree Serif':
+                echo("<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Press Start 2P':
+                echo("<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Sancreek':
+                echo("<link href='https://fonts.googleapis.com/css?family=Sancreek' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Homemade Apple':
+                echo("<link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>");
+                break;
+            case 'Dr Sugiyama':
+                echo("<link href='https://fonts.googleapis.com/css?family=Dr+Sugiyama' rel='stylesheet' type='text/css'>");
+                break;
+            default:
+                return;
+                break;
+        }
+    }
 
     /*
      *  Load the Custom CSS introduced by the store admin in the customizer
