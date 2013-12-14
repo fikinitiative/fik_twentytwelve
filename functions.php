@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Twelve functions and definitions.
+ * Twenty Twelve functions and definitions
  *
  * Sets up the theme and provides some helper functions, which are used
  * in the theme as custom template tags. Others are attached to action and
@@ -15,19 +15,20 @@
  * Functions that are not pluggable (not wrapped in function_exists()) are instead attached
  * to a filter or action hook.
  *
- * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
+ * For more information on hooks, actions, and filters, @link http://codex.wordpress.org/Plugin_API
  *
  * @package WordPress
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-/**
- * Sets up the content width value based on the theme's design and stylesheet.
- */
-if (!isset($content_width))
-    $content_width = 625;
+
+// Set up the content width value based on the theme's design and stylesheet.
+if ( ! isset( $content_width ) )
+	$content_width = 625;
 
 /**
+ * Twenty Twelve setup.
+ *
  * Sets up theme defaults and registers the various WordPress features that
  * Twenty Twelve supports.
  *
