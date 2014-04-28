@@ -918,3 +918,5 @@ if (!function_exists('twentytwelve_comment')) :
     }
 
     add_filter('excerpt_more', 'new_excerpt_more');
+
+    add_action('wp_footer', 'fik_legal_terms_link', 100);
