@@ -9,6 +9,9 @@
         <li class="<?php echo get_theme_mod( 'fik_product_thumb_type', 'fik2012-thumb-sq' ); ?>">
             <div class="fik2012-thumb"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( get_theme_mod( 'fik_product_thumb_type', 'fik2012-thumb-sq' ) ); } ?></a></div>
             <h2 class="product-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+            <?php if(get_fik_previous_price()): ?>
+            <div class="product-previous-price"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_fik_previous_price(); ?></a></div>
+            <?php endif; ?>
             <div class="product-price"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_fik_price(); ?></a></div>
         </li>
 
@@ -37,6 +40,7 @@
                 <?php endif; ?>
                 
                 <div class="price-and-purchase">
+                    <?php the_fik_previous_price(); ?>
                     <?php the_fik_price(); ?>
                     <?php the_fik_add_to_cart_button(); ?>
                     
